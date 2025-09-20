@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - master
 
 jobs:
   run-penpot-script:
@@ -17,7 +16,7 @@ jobs:
       - name: Node.js 환경 설정
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Node.js LTS 버전 사용
+          node-version: '18'
 
       - name: 종속성 설치
         run: npm install
@@ -26,3 +25,5 @@ jobs:
         run: node main.js
         env:
           PENPOT_ACCESS_TOKEN: ${{ secrets.PENPOT_ACCESS_TOKEN }}
+          FILE_ID: 'bd830f34-5ac9-8161-8006-d51d0dd44c6b'
+          PAGE_ID: 'bd830f34-5ac9-8161-8006-d51d0dd44c6c'
