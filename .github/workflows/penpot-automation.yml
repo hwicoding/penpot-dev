@@ -25,6 +25,5 @@ jobs:
         run: node main.js
         env:
           PENPOT_ACCESS_TOKEN: ${{ secrets.PENPOT_ACCESS_TOKEN }}
-          PROJECT_ID: 'e7c79b0d-7aa0-808c-8006-d5123b41b9e5'
           FILE_ID: 'e7c79b0d-7aa0-808c-8006-d538002be807'
           PAGE_ID: 'e7c79b0d-7aa0-808c-8006-d538002be808'
