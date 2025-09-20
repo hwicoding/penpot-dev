@@ -17,6 +17,7 @@ const axios = require('axios');
 // .env 파일 또는 깃허브 Secrets에 저장된 값입니다.
 // =============================================================================
 const PENPOT_ACCESS_TOKEN = process.env.PENPOT_ACCESS_TOKEN;
+const PROJECT_ID = process.env.PROJECT_ID; // 프로젝트 ID
 const FILE_ID = process.env.FILE_ID; // 초안 파일의 고유 ID
 const PAGE_ID = process.env.PAGE_ID; // 요소를 생성할 페이지의 고유 ID
 
@@ -26,7 +27,7 @@ const PAGE_ID = process.env.PAGE_ID; // 요소를 생성할 페이지의 고유 
 async function createElements() {
   // 펜팟 API의 엔드포인트 URL입니다.
   // 초안 파일은 프로젝트 ID가 필요 없으므로 'files'로 바로 접근합니다.
-  const API_URL = `https://design.penpot.app/api/v1/files/${FILE_ID}/pages/${PAGE_ID}/elements`;
+  const API_URL = `https://design.penpot.app/api/v1/projects/${PROJECT_ID}/files/${FILE_ID}/pages/${PAGE_ID}/elements`;
 
   // API 요청 시 필요한 인증 헤더입니다.
   const headers = {
