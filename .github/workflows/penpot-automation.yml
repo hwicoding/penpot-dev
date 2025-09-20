@@ -1,3 +1,10 @@
+name: Penpot Automation
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   run-penpot-script:
     runs-on: ubuntu-latest
